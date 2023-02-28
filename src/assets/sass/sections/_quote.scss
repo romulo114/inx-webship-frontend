@@ -1,0 +1,269 @@
+@use "../abstract/" as *;
+// * ==========================================
+// *
+// *   SE C T I O N     Q U O T E    F O R M
+// *
+// * ==========================================
+.quote {
+
+    &__mainForm{
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+  &__form {
+    margin: 4rem 0;
+    padding-inline: 3rem;
+  }
+  &__container {
+    background-color: #fff;
+    border-radius: 0.9rem;
+    border: var(--border-color);
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+  }
+
+  &__information {
+    position: relative;
+
+    &::after {
+      display: none;
+      @include responsive(desktop) {
+        display: block;
+        content: '';
+        border-right: 1px dashed var(--light-gray);
+        height: 70%;
+        position: absolute;
+        top: 35%;
+        right: 0;
+      }
+    }
+  }
+
+  // =========================
+  //
+  // !!type
+  // ==========================
+  &__title-box {
+    font-size: map-get($fontSize, title-section);
+    text-transform: capitalize;
+    color: var(--medium-gray);
+    font-weight: map-get($fontWeight, medium);
+  }
+  &__label {
+    font-size: map-get($fontSize, fontSize-xs);
+    //text-transform: capitalize;  because  of 'Dimensions (L x W x H) per unit'
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  &__firstRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+    @include responsive(desktop) {
+      grid-template-columns: min-content auto;
+      column-gap: 3rem;
+    }
+
+
+  }
+  &__field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include responsive(mobile-land) {
+      padding-right: 3rem;
+      justify-content: flex-start;
+      column-gap: 4rem;
+    }
+    @include responsive(tablet-port) {
+
+      justify-content: flex-start;
+      column-gap: 6rem;
+    }
+
+    @include responsive(desktop) {
+      justify-content: flex-start;
+      column-gap: 2rem;
+    }
+    @include responsive(Mlarge) {
+      column-gap: 4em;
+    }
+    &__bol {
+      display: grid;
+      margin-top: 1rem;
+      row-gap: 1rem;
+    }
+    &__options {
+      display: flex;
+
+      #whiteglove label {
+        transform: translateX(-22px);
+      }
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: map-get($fontSize, fontSize-s2);
+      text-transform: uppercase;
+      position: relative;
+      margin-left: 2rem;
+      text-align: center;
+      img {
+        width: 3em;
+        height: 3rem;
+      }
+      span {
+        width: 100%;
+        margin-top: 0.6rem;
+
+        @include responsive(desktop) {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  // =========================
+  //
+  // !!Origin and destination
+  // ==========================
+
+  &__address {
+    margin-top: 2rem;
+
+    @include responsive(mobile-land) {
+      margin-top: 0;
+    }
+
+    &__firstrow,
+    &__secondrow {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      position: relative;
+
+      @include responsive(tablet-land) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @include responsive(desktop) {
+        justify-content: flex-start;
+        column-gap: 2rem;
+      }
+
+      @include responsive(Mlarge) {
+        column-gap: 1em;
+      }
+      @include responsive(Mlarge) {
+        column-gap: 3rem;
+      }
+    }
+
+    //&__book {
+    //  display: flex;
+    //  font-size: map-get($fontSize, fontSize-xs);
+    //  color: var(--green);
+    //  display: flex;
+    //  align-items: center;
+    //  background-color: transparent;
+    //  border: none;
+    //  //   position: absolute;
+    //  right: 0rem;
+    //  top: 0.3rem;
+    //  &:focus {
+    //    outline: none;
+    //  }
+    //  img {
+    //    width: 1.3rem;
+    //    height: 1.3rem;
+    //  }
+    //}
+  }
+
+  // !*Styling dropdown general menu
+  //! Check componets section
+
+  &__fieldInput {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: clamp(10rem, 1rem, 30rem);
+
+      @include responsive(Mlarge) {
+        width: 12rem;
+      }
+    }
+
+    @include responsive(tablet-land) {
+      column-gap: 1rem;
+    }
+    @include responsive(desktop) {
+      column-gap: 1rem;
+    }
+    @include responsive(Mlarge) {
+      column-gap: 2.5rem;
+    }
+  }
+
+  &__fieldInputRow {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: clamp(10rem, 1rem, 30rem);
+
+      @include responsive(Mlarge) {
+        width: 12rem;
+      }
+    }
+
+    @include responsive(tablet-land) {
+      column-gap: 1rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include responsive(desktop) {
+      column-gap: 1rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include responsive(Mlarge) {
+      column-gap: 2.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__swap {
+    background-color: transparent;
+    border: none;
+    margin-top: 1rem;
+  }
+
+  &__country {
+    position: relative;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+  }
+}

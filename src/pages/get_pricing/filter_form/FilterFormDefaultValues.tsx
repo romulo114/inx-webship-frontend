@@ -1,0 +1,30 @@
+export const defaultValues = {
+    parcel_type: ['LTL'],
+    origin_country: {value: 'United States', label: 'United States', code: 'US'},
+    origin_city: 'Mountain View',
+    origin_state: 'CA',
+    origin_post_code: '91043',
+    destination_country: {value: 'United States', label: 'United States', code: 'US'},
+    destination_city: 'New York',
+    destination_state: 'NY',
+    destination_post_code: '10036',
+    load_information: [
+        {
+            dimension_length: '6',
+            dimension_width: '6',
+            dimension_height: '6',
+            weight: '15.4',
+            weight_unit: {value: 'Lbs', label: 'Lbs'},
+            commodity: {value: 25, label: 'Description 10011', nmfc: '200'},
+            commodity_nmfc: '50',
+            class: {value: '50', label: '50'},
+            type: {value: 'Pallets', label: 'Pallets'},
+            units: 1,
+            is_palletized: true,
+            is_hazmat: false,
+        }
+    ],
+    has_extra_options: true,
+    has_accessorials: false,
+    //accessorial: [{value: 'HAZMAT', label: 'Hazmat'}],
+};

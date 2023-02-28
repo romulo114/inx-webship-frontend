@@ -1,0 +1,17 @@
+export const savedQuotesColumnSettings = [
+    {column:"actions",             is_active: true,    disable_hide: true,     label: 'Actions'},
+    {column:"quoteId",             is_active: true,    disable_hide: true,     label: 'Quote ID'},
+    {column:"quoteNumber",         is_active: true,    disable_hide: true,     label: 'Quote Number'},
+    {column:"origin",              is_active: true,    disable_hide: false,    label: 'Origin'},
+    {column:"handlingUnits",       is_active: true,    disable_hide: false,    label: 'Handling Unit(s)'},
+    {column:"destination",         is_active: true,    disable_hide: false,    label: 'Destination'},
+    {column:"dims",                is_active: true,    disable_hide: false,    label: 'Dims'},
+    {column:"weight",              is_active: true,    disable_hide: false,    label: 'Weight'},
+    {column:"accessorial",         is_active: true,    disable_hide: false,    label: 'Accessorial(s)'},
+    {column:"insurance",           is_active: true,    disable_hide: false,    label: 'Insurance'},
+    {column:"carrier",             is_active: true,    disable_hide: false,    label: 'Carrier'},
+    {column:"service",             is_active: true,    disable_hide: false,    label: 'Service'},
+    {column:"transitTime",         is_active: true,    disable_hide: false,    label: 'Transit Time'},
+    {column:"date",                is_active: true,    disable_hide: false,    label: 'Date'},
+    {column:"price",               is_active: true,    disable_hide: false,    label: 'Price'},
+]
